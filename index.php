@@ -82,23 +82,33 @@ if (isset($_POST['usuario'])) {
 </head>
 
 <body>
+<table width="200">
+  <tr>
+    <td><img src="img/tcvalLogo.png" width="320" height="105"></td>
+  </tr>
+</table>
+<table width="200">
+  <tr>
+    <td><img src="img/bienvenido.png" width="685" height="82"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
 <form name="form1" method="POST" action="<?php echo $loginFormAction; ?>">
-  <table width="200" border="1">
+  <table width="200">
     <tr>
-      <td>Usuario</td>
-      <td><label for="usuario"></label>
-      <input type="text" name="usuario" id="usuario"></td>
+      <td><img src="img/usurindex.png" width="227" height="55"></td>
+      <td><input type="text" name="usuario" id="usuario"></td>
     </tr>
     <tr>
-      <td>Contraseña</td>
-      <td><label for="contrasena"></label>
-      <input type="password" name="contrasena" id="contrasena"></td>
+      <td><img src="img/contrasenaindex.png" width="227" height="55"></td>
+      <td><input type="text" name="contrasena" id="contrasena"></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="iniciar" id="iniciar" value="Iniciar"></td>
+      <td><input type="submit" name="button" id="button" value="Iniciar"></td>
     </tr>
   </table>
 </form>
+<p>&nbsp;</p>
 </body>
 </html>
