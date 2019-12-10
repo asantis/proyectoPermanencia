@@ -6,6 +6,72 @@
 </head>
 
 <body>
-Prueba apartado ingreso de camiones!!
+<form action="listado.php" target="" method="post">
+<p><img src="img/tcvalLogo.png" width="268" height="86"></p>
+<p>&nbsp;</p>
+<table>
+  <tr>
+	<td>Patente</td>
+    <td>Operacion</td>
+    <td>Procedencia</td>
+    <td>Iso Code</td>
+    <td>Contenedor</td>
+    <td>Observacion</td>
+    <td></td>
+</tr>
+<tr>
+	<td><input type="text" size="10"></td>
+    <td><select>
+    <?php
+	//consulta
+	$conn=mysqli_connect("localhost","root","","proyecto");
+	$Sql="SELECT * FROM tipo_operacion ORDER BY operacion";
+	$result=mysqli_query($conn,$Sql);
+	while($row=mysqli_fetch_array($result)){
+		?>
+        <option value="<?php echo $row["idOperacion"];?>"><?php echo $row["operacion"];?></option>
+        <?php
+		}
+	?> 
+    </select></td>
+    
+    <td><select>
+    <?php
+	
+	$Sql="SELECT * FROM procedencias ORDER BY Procedencia";
+	$result=mysqli_query($conn,$Sql);
+	while($row=mysqli_fetch_array($result)){
+		?>
+        <option value="<?php echo $row["idProcedencia"];?>"><?php echo $row["Procedencia"];?></option>
+        <?php
+		}
+	?> 
+    
+    </select></td>
+    
+    
+    <td><select>
+    
+    <?php
+	
+	$Sql="SELECT * FROM iso_codes ORDER BY descrip";
+	$result=mysqli_query($conn,$Sql);
+	while($row=mysqli_fetch_array($result)){
+		?>
+        <option value="<?php echo $row["isocode"];?>"><?php echo $row["descrip"];?></option>
+        <?php
+		}
+	?> 
+    
+    </select></td>
+    
+    
+    
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="submit"></td>
+</tr>
+</table>
+</form>
 </body>
 </html>

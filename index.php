@@ -78,30 +78,30 @@ if (isset($_POST['usuario'])) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>Documento sin título</title>
+<title>Sistema indicador de permanencia</title>
 </head>
 
 <body>
 <table width="200">
   <tr>
-    <td><img src="img/tcvalLogo.png" width="320" height="105"></td>
+    <td><img src="img/tcvalLogo.png" width="271" height="90"></td>
   </tr>
 </table>
 <table width="200">
   <tr>
-    <td><img src="img/bienvenido.png" width="685" height="82"></td>
+    <td><img src="img/bienvenido.png" width="685" height="124"></td>
   </tr>
 </table>
 <p>&nbsp;</p>
 <form name="form1" method="POST" action="<?php echo $loginFormAction; ?>">
   <table width="200">
     <tr>
-      <td><img src="img/usurindex.png" width="227" height="55"></td>
+      <td>Usuario</td>
       <td><input type="text" name="usuario" id="usuario"></td>
     </tr>
     <tr>
-      <td><img src="img/contrasenaindex.png" width="227" height="55"></td>
-      <td><input type="text" name="contrasena" id="contrasena"></td>
+      <td>Contraseña</td>
+      <td><input type="password" name="contrasena" id="contrasena"></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
