@@ -3,12 +3,18 @@
 <head>
 <meta charset="utf-8">
 <title>Documento sin título</title>
+<script language="javascript" type="text/javascript">
+function envio(){
+document.getElementById('enviar').submit();
+document.getElementById('enviar').reset();
+//location.reload();
+}
+</script>
 </head>
 
 <body>
-<form action="listado.php" target="" method="post">
+<form action="listado.php" target="pListado" method="post" id="enviar">
 <p><img src="img/tcvalLogo.png" width="268" height="86"></p>
-<p>&nbsp;</p>
 <table>
   <tr>
 	<td>Patente</td>
@@ -20,8 +26,8 @@
     <td></td>
 </tr>
 <tr>
-	<td><input type="text" size="10"></td>
-    <td><select>
+	<td><input type="text" size="10" name="patente" id="patente"></td>
+    <td><select name="operacion" id="operacion">
     <?php
 	//consulta
 	$conn=mysqli_connect("localhost","root","","proyecto");
@@ -35,7 +41,7 @@
 	?> 
     </select></td>
     
-    <td><select>
+    <td><select name="procedencia" id="procedencia">
     <?php
 	
 	$Sql="SELECT * FROM procedencias ORDER BY Procedencia";
@@ -50,7 +56,7 @@
     </select></td>
     
     
-    <td><select>
+    <td><select name="isocode" id="isocode">
     
     <?php
 	
@@ -67,9 +73,9 @@
     
     
     
-    <td><input type="text"></td>
-    <td><input type="text"></td>
-    <td><input type="submit"></td>
+    <td><input type="text" name="contenedor" id="contenedor"></td>
+    <td><input type="text" name="observacion" id="observacion"></td>
+    <td><input type="button" value="Guardar" name="Guardar" onClick="envio();"></td>
 </tr>
 </table>
 </form>

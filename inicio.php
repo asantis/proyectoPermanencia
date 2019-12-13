@@ -51,7 +51,7 @@ function MM_swapImage() { //v3.0
 <p>&nbsp;</p>
 <table width="200">
   <tr>
-    <td><a href="ingreso.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('btningreso','','img/ingresoboton2.png',1)"><img src="img/ingresoboton1.png" width="190" height="50" id="btningreso"></a></td>
+    <td><a href="registro_ingreso.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('btningreso','','img/ingresoboton2.png',1)"><img src="img/ingresoboton1.png" width="190" height="50" id="btningreso"></a></td>
     <td><a href="salida.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('btnsalida','','img/salidaboton2.png',1)"><img src="img/salidaboton1.png" width="190" height="50" id="btnsalida"></a></td>
     <td><a href="informes.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('btnreportes','','img/reporteboton2.png',1)"><img src="img/reporteboton1.png" width="190" height="50" id="btnreportes"></a></td>
   </tr>

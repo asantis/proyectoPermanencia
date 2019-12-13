@@ -41,7 +41,7 @@
 	?> 
     </select></td>
     
-    <td><input type="text" size="10"></td> //Faena
+    <td><input type="text" size="10"></td>
     
     <td><select>
     <?php
@@ -57,9 +57,9 @@
     
     </select></td>
     
-    <td><input type="text"></td> //Contenedor
-    
-    <td><input type="text"></td> // B/L
+    <td><input type="text"></td> 
+  
+    <td><input type="text"></td> 
     
     <td><select>
     

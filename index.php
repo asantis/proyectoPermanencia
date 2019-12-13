@@ -81,7 +81,7 @@ if (isset($_POST['usuario'])) {
 <title>Sistema indicador de permanencia</title>
 </head>
 
-<body>
+<body><center>
 <table width="200">
   <tr>
     <td><img src="img/tcvalLogo.png" width="271" height="90"></td>
@@ -110,5 +110,6 @@ if (isset($_POST['usuario'])) {
   </table>
 </form>
 <p>&nbsp;</p>
+</center>
 </body>
 </html>
