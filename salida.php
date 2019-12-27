@@ -8,7 +8,7 @@
 <body>
 <form action="listadosalida.php" target="" method="post">
 <p><img src="img/tcvalLogo.png" width="268" height="86"></p>
-<p>&nbsp;</p>
+<p>Registrar Salida</p>
 <table>
   <tr>
 	<td>Patente</td>
@@ -18,10 +18,6 @@
     <td>Contenedor</td>
     <td>Nro B/L</td>
     <td>Consignatario</td>
-    <td>Tipo Bulto</td>
-    <td>Cantidad</td>
-    <td>Guia</td>
-    <td>Folio</td>
     <td>Observacion</td>
     <td></td>
 </tr>
@@ -91,13 +87,29 @@
     
     </select></td>
     
-    <td><input type="text"></td>
-    <td><input type="text"></td>
-    <td><input type="text"></td>
-    <td><input type="text"></td>
     <td><input type="submit"></td>
 </tr>
 </table>
+</form>
+<form name="form1" method="post" action="">
+  <p>&nbsp;</p>
+  <p>Datos de Arrastre  </p>
+  	
+ <table>
+  <tr>
+    <td>Tipo Bulto</td>
+    <td>Cantidad</td>
+    <td>Guia</td>
+    <td>Folio</td>
+  </tr>
+  
+   	<td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    <td><input type="text"></td>
+    
+  </tr>
+  </table>
 </form>
 </body>
 </html>
