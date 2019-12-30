@@ -28,6 +28,7 @@ document.getElementById('enviar').reset();
 <tr>
 	<td><input type="text" size="10" name="patente" id="patente"></td>
     <td><select name="operacion" id="operacion">
+    <option value="0"> -- SELECCIONAR -- </option>
     <?php
 	//consulta
 	$conn=mysqli_connect("localhost","root","","proyecto");
@@ -42,6 +43,7 @@ document.getElementById('enviar').reset();
     </select></td>
     
     <td><select name="procedencia" id="procedencia">
+    <option value="0"> -- SELECCIONAR -- </option>
     <?php
 	
 	$Sql="SELECT * FROM procedencias ORDER BY Procedencia";
@@ -57,6 +59,7 @@ document.getElementById('enviar').reset();
     
     
     <td><select name="isocode" id="isocode">
+    <option value="0"> -- SELECCIONAR -- </option>
     
     <?php
 	
