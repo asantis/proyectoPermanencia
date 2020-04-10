@@ -1,0 +1,236 @@
+<?php
+	session_start();	
+if(empty($_SESSION['active']))
+{
+	header('location: ../Login.php');
+}
+ ?>
+ 
+<?php
+	if($_SESSION['rol'] == 2)
+	{
+		header("location: ../inicio_operador.php");
+	}
+ ?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/estilos.css" rel="stylesheet" >
+<title>Documento sin título</title>
+
+
+<style> 
+.tabla { 
+  width: 95%; 
+  border-collapse: collapse; 
+  
+  
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+
+
+
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 25px;
+}
+td, th { 
+  padding: 6px 10px;
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size: 20px;
+}
+
+@media 
+only screen and (max-width: 1024px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+
+.tabla, thread, tbody, th, td,tr {
+	
+	font-size: 30px;	
+	width: 100%;
+	display: block; 
+	
+}
+
+tr {
+	border: 2px solid #ccc;	
+	
+}
+
+td{
+	border:none;
+	border-bottom:2px solid #eee;
+	position:relative;
+	padding-left:50%;
+	width: 50%;
+			
+}
+
+
+td:before{
+	position: absolute;
+	
+	top: 6px;
+	left:6px;
+	width:40%;
+	padding-top:10px;
+	white-space:nowrap;
+	font-weight:bold;
+}
+	td:nth-of-type(1):before { content: "Patente"; }
+	td:nth-of-type(2):before { content: "Fecha"; }
+	td:nth-of-type(3):before { content: "Hora de ingreso"; }
+	td:nth-of-type(4):before { content: "Tipo de operacion"; }
+	td:nth-of-type(5):before { content: "Procedencia"; }
+	td:nth-of-type(6):before { content: "Iso Code"; }
+	td:nth-of-type(7):before { content: "Contenedor"; }
+	td:nth-of-type(8):before { content: "Observacion"; } }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<center>
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+	if(stripos($ua,'android') !== false or stripos($ua,'IPHONE') !== false) { 
+	if($_SESSION['rol'] != 2){
+	
+?>
+<a href="../informes_telefono.php"><img src="../img/tcvalLogo.png" width="500" height="250"></a>
+<br/>
+<?php }}
+else{
+	
+
+?>
+
+<a href="../informes.php"><img src="../img/tcvalLogo.png" width="268" height="89"></a>
+<br/> 
+<hr>
+<?php } ?>
+
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+	if(stripos($ua,'Windows') !== false or stripos($ua,'IPHONE') !== false) { 
+?>
+	<div id="header">
+
+	<ul class="nav">
+    	<li><a href="../informes.php">Inicio</a> </li>
+        
+    	<li> <a href="">Reportes </a>
+        	<ul>
+            	<li><a href="../Registros/ListadoTerminal.php">Listado Terminal </a>  </li>
+                <li><a href="../Registros/ListadoPermanencia.php">Listado Permanencia </a> </li>
+                <li><a href="#"> Ingresos del dia </a> </li>
+            </ul>
+        </li>
+        
+        <li><a href="">Graficos </a>
+        	<ul>
+            	<li><a href="../Graficos/BultosGraph.php">Cargas </a>  </li>
+                <li><a href="../Graficos/ConsignaGraph.php">Consignatario</a> </li>
+                <li><a href="../Graficos/FaenaGraph.php">Faena</a> </li>
+                <li><a href="../Graficos/OperacionGraph.php">Operacion</a> </li>
+                <li><a href="../Graficos/ProcedenciaGraph.php">Procedencia</a> </li>
+            </ul>
+        </li> 
+        
+        <li> <a href="../Buscadores/salir.php">Cerrar Sesion </a> </li>
+    </ul>
+
+	</div>
+
+ <?php } ?>
+<br /><br /><br /><br />
+    <p style="font-size:200%; font-weight:bold"> Listado de camiones ingresados en el dia </p>
+    
+    <p style="font-size:25px;">
+        <?php 
+		$conn=mysqli_connect("localhost","root","","proyecto");
+		$sql5= "SELECT count(*) as 'conteo', date_format(sysdate(),'%d/%m/%y') as 'Fecha'
+FROM ingresos I 
+INNER JOIN tipo_operacion T ON I.Tipo_Operacion=T.idOperacion 
+INNER JOIN procedencias P ON I.Procedencia=P.idProcedencia 
+INNER JOIN iso_codes IC ON I.Iso_Code=IC.isocode
+WHERE I.Fecha = CURRENT_DATE
+ORDER BY I.fecha desc,I.hora desc";
+		$result=mysqli_query($conn,$sql5);
+		while($row=mysqli_fetch_array($result)){
+			
+			echo  "<br><tr>
+			<td>Han ingresado: </td>
+		<td>".$row['conteo']."</td>
+		<td> camiones </td>
+		<br>
+		<td>El dia: </td>
+		<td>".$row['Fecha']."</td>
+	</tr>
+	";
+		}
+	?>
+    </p>
+    
+    	 <tr>  
+            <table class="tabla">
+            <thead>
+            <tr>
+           </thead>
+                <th width="65">Patente</th>
+                <th width="63">Fecha</th>
+                <th width="65">Hora Ingreso</th>
+                <th width="63">Tipo Operacion</th>
+                <th width="63">Procedencia</th>
+                <th width="63">Iso Code</th>
+                <th width="63">Contenedor</th>
+                <th width="63">Observacion</th>
+			</tr
+         
+                        ><?php 
+		
+$sql4="SELECT I.patente,T.operacion,P.Procedencia,IC.descrip,I.Contenedor,I.Observacion,I.Mes,I.Fecha,I.Hora 
+FROM ingresos I 
+INNER JOIN tipo_operacion T ON I.Tipo_Operacion=T.idOperacion 
+INNER JOIN procedencias P ON I.Procedencia=P.idProcedencia 
+INNER JOIN iso_codes IC ON I.Iso_Code=IC.isocode
+WHERE I.Fecha = CURRENT_DATE
+ORDER BY I.fecha desc,I.hora desc" ;
+$result=mysqli_query($conn,$sql4);
+while($row=mysqli_fetch_array($result)){
+	echo "<tr>
+		<td>".$row['patente']."</td>
+		<td>".$row['Fecha']."</td>
+		<td>".$row['Hora']."</td>
+		
+		<td>".$row['operacion']."</td>
+		<td>".$row['Procedencia']."</td>
+		<td>".$row['descrip']."</td>
+		<td>".$row['Contenedor']."</td>
+		<td>".$row['Observacion']."</td>
+	</tr>
+	";
+}
+?>
+            </table>
+    </tr>
+</center>
+</body>
+</html>

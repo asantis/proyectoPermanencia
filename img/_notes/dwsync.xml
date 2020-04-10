@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="ingresoboton2.png" server="C:/xampp/htdocs/proyectoV2/" local="132202951872345730" remote="132202951870000000" Dst="2" />
-<file name="ingresoboton1.png" server="C:/xampp/htdocs/proyectoV2/" local="132202950847698210" remote="132202950840000000" Dst="2" />
-<file name="salidaboton2.png" server="C:/xampp/htdocs/proyectoV2/" local="132202958188634181" remote="132202958180000000" Dst="2" />
-<file name="reporteboton2.png" server="C:/xampp/htdocs/proyectoV2/" local="132202960174578573" remote="132202960170000000" Dst="2" />
-<file name="salidaboton1.png" server="C:/xampp/htdocs/proyectoV2/" local="132202956875747435" remote="132202956870000000" Dst="2" />
-<file name="reporteboton1.png" server="C:/xampp/htdocs/proyectoV2/" local="132202959430595899" remote="132202959430000000" Dst="2" />
-<file name="tcvalLogo.png" server="C:/xampp/htdocs/proyectoV2/" local="132202976391194894" remote="132202976390000000" Dst="2" />
-<file name="bienvenido.png" server="C:/xampp/htdocs/proyectoV2/" local="132202981884782781" remote="132202981880000000" Dst="2" />
-<file name="usurindex.png" server="C:/xampp/htdocs/proyectoV2/" local="132202986829338502" remote="132202986820000000" Dst="2" />
-<file name="contrasenaindex.png" server="C:/xampp/htdocs/proyectoV2/" local="132202987336200878" remote="132202987330000000" Dst="2" />
-<file name="btniniciar.png" server="C:/xampp/htdocs/proyectoV2/" local="132202989614955161" remote="132202989610000000" Dst="2" />
+<file name="ingresoboton2.png" server="C:/xampp/htdocs/proyectoV2/" local="132202951872345730" remote="132202951870000000" Dst="0" />
+<file name="ingresoboton1.png" server="C:/xampp/htdocs/proyectoV2/" local="132202950847698210" remote="132202950840000000" Dst="0" />
+<file name="salidaboton2.png" server="C:/xampp/htdocs/proyectoV2/" local="132202958188634181" remote="132202958180000000" Dst="0" />
+<file name="reporteboton2.png" server="C:/xampp/htdocs/proyectoV2/" local="132202960174578573" remote="132202960170000000" Dst="0" />
+<file name="salidaboton1.png" server="C:/xampp/htdocs/proyectoV2/" local="132202956875747435" remote="132202956870000000" Dst="0" />
+<file name="reporteboton1.png" server="C:/xampp/htdocs/proyectoV2/" local="132202959430595899" remote="132202959430000000" Dst="0" />
+<file name="tcvalLogo.png" server="C:/xampp/htdocs/proyectoV2/" local="132202976391194894" remote="132202976390000000" Dst="0" />
+<file name="bienvenido.png" server="C:/xampp/htdocs/proyectoV2/" local="132202981884782781" remote="132202981880000000" Dst="0" />
+<file name="usurindex.png" server="C:/xampp/htdocs/proyectoV2/" local="132202986829338502" remote="132202986820000000" Dst="0" />
+<file name="contrasenaindex.png" server="C:/xampp/htdocs/proyectoV2/" local="132202987336200878" remote="132202987330000000" Dst="0" />
+<file name="btniniciar.png" server="C:/xampp/htdocs/proyectoV2/" local="132202989614955161" remote="132202989610000000" Dst="0" />
+<file name="Atras.png" server="C:/xampp/htdocs/proyectoV2/" local="132249495134622379" remote="132249495130000000" Dst="0" />
+<file name="CamionesTerminal.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248839744592829" remote="132248839740000000" Dst="0" />
+<file name="CamionesTerminal2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248841058780661" remote="132248841050000000" Dst="0" />
+<file name="cerrar_sesion.png" server="C:/xampp/htdocs/proyectoV2/" local="132248032601734205" remote="132248032600000000" Dst="0" />
+<file name="GraficoBultos.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249454895021973" remote="132249454890000000" Dst="0" />
+<file name="GraficoBultos2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249456721904911" remote="132249456720000000" Dst="0" />
+<file name="GraficoConsignaciones.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249458110284348" remote="132249458110000000" Dst="0" />
+<file name="GraficoConsignaciones2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249458627127266" remote="132249458620000000" Dst="0" />
+<file name="GraficoFaenas.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249459404420255" remote="132249459400000000" Dst="0" />
+<file name="GraficoFaenas2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249460953732498" remote="132249460950000000" Dst="0" />
+<file name="GraficoOperaciones.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249468414412833" remote="132249468410000000" Dst="0" />
+<file name="GraficoOperaciones2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249460597104572" remote="132249460590000000" Dst="0" />
+<file name="Graficos.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248859040710176" remote="132248859040000000" Dst="0" />
+<file name="Graficos2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248859456237196" remote="132248859450000000" Dst="0" />
+<file name="GraficosProcedencia.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249505131979438" remote="132249505130000000" Dst="0" />
+<file name="GraficosProcedencia2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132249506368368449" remote="132249506360000000" Dst="0" />
+<file name="IngresosDia.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248858103656559" remote="132248858100000000" Dst="0" />
+<file name="IngresosDia2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248858552328999" remote="132248858550000000" Dst="0" />
+<file name="Permanencia.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248856732106601" remote="132248856730000000" Dst="0" />
+<file name="Permanencia2.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132248857431418575" remote="132248857430000000" Dst="0" />
+<file name="Registro_usuario.PNG" server="C:/xampp/htdocs/proyectoV2/" local="132247861965018056" remote="132247861960000000" Dst="0" />
 </dwsync>

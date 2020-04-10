@@ -1,0 +1,229 @@
+<?php
+	session_start();	
+if(empty($_SESSION['active']))
+{
+	header('location: ../Login.php');
+}
+ ?>
+ 
+<?php
+	if($_SESSION['rol'] == 2)
+	{
+		header("location: ../inicio_operador.php");
+	}
+ ?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../css/estilos.css" rel="stylesheet" >
+<title>Documento sin título</title>
+
+<style> 
+.tabla { 
+  width: 95%; 
+  border-collapse: collapse; 
+
+  
+  
+}
+
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+
+
+
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 25px;
+}
+td, th { 
+  padding: 6px 10px;
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size: 20px;
+}
+
+@media 
+only screen and (max-width: 1024px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+
+.tabla, thread, tbody, th, td,tr {
+	
+	font-size: 30px;	
+	width: 100%;
+	display: block; 
+	
+}
+
+tr {
+	border: 2px solid #ccc;	
+	
+}
+
+td{
+	border:none;
+	border-bottom:2px solid #eee;
+	position:relative;
+	padding-left:50%;
+	width: 50%;
+			
+}
+
+td:before{
+	position: absolute;
+	
+	top: 6px;
+	left:6px;
+	width:40%;
+	padding-top:10px;
+	white-space:nowrap;
+	font-weight:bold;
+}
+	td:nth-of-type(1):before { content: "Patente"; }
+	td:nth-of-type(2):before { content: "Hora de ingreso"; }
+	td:nth-of-type(3):before { content: "Fecha"; }
+
+	td:nth-of-type(4):before { content: "Mes"; }
+	td:nth-of-type(5):before { content: "Tipo de operacion"; }
+	td:nth-of-type(6):before { content: "Procedencia"; }
+	
+	td:nth-of-type(7):before { content: "Iso Code"; }
+	td:nth-of-type(8):before { content: "Contenedor"; }
+	td:nth-of-type(9):before { content: "Observaciones"; }
+	}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<center>
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+	if(stripos($ua,'android') !== false or stripos($ua,'IPHONE') !== false) { 
+	if($_SESSION['rol'] !=2){
+?>
+<a href="../informes_telefono.php"><img src="../img/tcvalLogo.png" width="500px" height="250px"></a>
+<br/>
+<?php }}
+else{
+	
+
+?>
+
+<a href="../inicio.php"><img src="../img/tcvalLogo.png" width="268" height="89"></a>
+<br/> 
+<hr />
+<?php } ?>
+
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+	if(stripos($ua,'Windows') !== false or stripos($ua,'IPHONE') !== false) { 
+?>
+	<div id="header">
+
+	<ul class="nav">
+    	
+    	<li><a href="../informes.php">Inicio</a> </li>
+        
+    	<li> <a href="">Reportes </a>
+        	<ul>
+            	<li><a href="#">Listado Terminal </a>  </li>
+                <li><a href="../Registros/ListadoPermanencia.php">Listado Permanencia </a> </li>
+                <li><a href="../Registros/ListadoIngresosDia.php"> Ingresos del dia </a> </li>
+            </ul>
+        </li>
+        
+        <li><a href="">Graficos </a>
+        	<ul>
+            	<li><a href="../Graficos/BultosGraph.php">Cargas </a>  </li>
+                <li><a href="../Graficos/ConsignaGraph.php">Consignatario</a> </li>
+                <li><a href="../Graficos/FaenaGraph.php">Faena</a> </li>
+                <li><a href="../Graficos/OperacionGraph.php">Operacion</a> </li>
+                <li><a href="../Graficos/ProcedenciaGraph.php">Procedencia</a> </li>
+            </ul>
+        </li> 
+        
+        <li> <a href="../Buscadores/salir.php">Cerrar Sesion </a> </li>
+    </ul>
+
+	</div>
+
+ <?php } ?>
+ 
+ </br></br>
+</br>
+
+
+
+<h1 style="font-size:30px"> Listado de Camiones dentro del terminal </h1>
+
+
+
+<p style="font-size:30px; font-weight:normal">
+    <?php 
+		$conn=mysqli_connect("localhost","root","","proyecto");
+		$sql= "select count(*) as 'camiones', i.Fecha, DATE_FORMAT(date(sysdate()),'%d-%m-%Y') as fechahoy from 	ingresos i left JOIN salidas s on i.idIngreso=s.idIngreso where s.idIngreso is null";
+		$result=mysqli_query($conn,$sql);
+		while($row=mysqli_fetch_array($result)){
+			
+			echo  "<br><tr>
+			<td>Se encuentran: </td>
+			<br/>
+		<td>".$row['camiones']."</td>
+		<td> camiones dentro del terminal </td>
+		<br>
+		<br>
+		<td>Fecha de hoy: </td>
+		<td>".$row['fechahoy']."</td>
+	</tr>
+	";
+		}
+	?>
+</p>
+
+<br />
+<p style="font-size:24px"> Busqueda por fecha de ingreso </p>
+<br /> 
+        <input type="date" name="txtFecha" id="txtFecha" style='width:300px; height:75px; font-size:25px; text-align:center;' />
+        <input type="button" name="btnFecha" id="btnFecha" value="Buscar" style='width:300px; height:75px; font-size:25px; ' />
+<br /> <br />
+        <table
+       class="tabla" id="gridFecha">
+<tr >
+                <th width="65">Patente</th>
+                <th width="65">Hora Ingreso</th>
+                <th width="63">Fecha</th>
+                <th width="65">Mes</th>
+                <th width="63">Tipo Operacion</th>
+                <th width="63">Procedencia</th>
+                <th width="63">Iso Code</th>
+                <th width="63">Contenedor</th>
+                <th width="63">Observacion</th>
+
+    </tr>
+    </table>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/Tiempo.js"></script>
+
+   
+  </center>  
+</body>
+</html>

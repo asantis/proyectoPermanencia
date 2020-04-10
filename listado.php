@@ -1,3 +1,5 @@
+<!--Pantalla que no uso -->
+
 <?php
 //conexion bd
 session_start();
@@ -18,7 +20,7 @@ if (isset($_POST['patente'])){
 setlocale(LC_TIME,"es_ES");
 $fecha=date('F');
 $fecha=strftime('%B');
-$Sql="INSERT INTO ingresos(Mes,Faena,Fecha,Turno,Hora,Patente,Tipo_Operacion,Procedencia,Contenedor,Iso_Code,Observacion,Empleado) VALUES('".$fecha."','','".date('y-m-d')."','','".date('H:i:s')."','".$_POST['patente']."','".$_POST['operacion']."','".$_POST['procedencia']."','".$_POST['contenedor']."','".$_POST['isocode']."','".$_POST['observacion']."','".$_SESSION['MM_Username']."')";
+$Sql="INSERT INTO ingresos(Mes,Faena,Fecha,Turno,Hora,Patente,Tipo_Operacion,Procedencia,Contenedor,Iso_Code,Observacion,Empleado) VALUES('".$fecha."','','".date('y-m-d')."','','".date('H:i:s')."','".$_POST['patente']."','".$_POST['operacion']."','".$_POST['procedencia']."','".$_POST['contenedor']."','".$_POST['isocode']."','".$_POST['observacion']."','".$_SESSION['usuario']."')";
 	$result=mysqli_query($conn,$Sql);
 	if ($result){
 		echo "Datos guardados con exito";}

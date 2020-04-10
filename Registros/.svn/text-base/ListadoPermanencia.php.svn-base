@@ -1,0 +1,192 @@
+<?php
+	session_start();	
+if(empty($_SESSION['active']))
+{
+	header('location: ../Login.php');
+}
+ ?>
+ 
+<?php
+	if($_SESSION['rol'] == 2)
+	{
+		header("location: ../inicio_operador.php");
+	}
+ ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<link href="../css/estilos.css" rel="stylesheet" >
+
+
+<style> 
+.tabla { 
+  width: 95%; 
+  border-collapse: collapse; 
+
+  
+  
+}
+
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+
+
+
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 25px;
+}
+td, th { 
+  padding: 6px 10px;
+  border: 1px solid #ccc; 
+  text-align: left; 
+  font-size: 20px;
+}
+
+@media 
+only screen and (max-width: 1024px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+
+.tabla, thread, tbody, th, td,tr {
+	
+	font-size: 30px;	
+	width: 100%;
+	display: block; 
+	
+}
+
+tr {
+	border: 2px solid #ccc;	
+	
+}
+
+td{
+	border:none;
+	border-bottom:2px solid #eee;
+	position:relative;
+	padding-left:50%;
+	width: 50%;
+			
+}
+
+td:before{
+	position: absolute;
+	
+	top: 6px;
+	left:6px;
+	width:40%;
+	padding-top:10px;
+	white-space:nowrap;
+	font-weight:bold;
+}
+	td:nth-of-type(1):before { content: "Patente"; }
+	td:nth-of-type(2):before { content: "Hora de ingreso"; }
+	td:nth-of-type(3):before { content: "Fecha de retiro"; }
+
+	td:nth-of-type(4):before { content: "Hora de ingreso"; }
+	td:nth-of-type(5):before { content: "Fecha de retiro"; }
+	td:nth-of-type(6):before { content: "Tiempo de permanencia"; }
+	}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<center>
+
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+	if(stripos($ua,'android') !== false or stripos($ua,'IPHONE') !== false) { 
+	if($_SESSION['rol'] != 2){
+	
+?>
+<a href="../informes_telefono.php"><img src="../img/tcvalLogo.png" width="500" height="250"></a>
+<br/>
+<?php }}
+else{
+	
+
+?>
+
+<a href="../inicio.php"><img src="../img/tcvalLogo.png" width="268" height="89"></a>
+<br/> 
+<hr>
+<?php } ?>
+ 
+<?php
+$ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+	if(stripos($ua,'Windows') !== false or stripos($ua,'IPHONE') !== false) { 
+?>
+	<div id="header">
+
+	<ul class="nav">
+    	<li><a href="../informes.php">Inicio</a> </li>
+        
+    	<li> <a href="">Reportes </a>
+        	<ul>
+            	<li><a href="../Registros/ListadoTerminal.php">Listado Terminal </a>  </li>
+                <li><a href="#">Listado Permanencia </a> </li>
+                <li><a href="../Registros/ListadoIngresosDia.php"> Ingresos del dia </a> </li>
+            </ul>
+        </li>
+        
+        <li><a href="">Graficos </a>
+        	<ul>
+            	<li><a href="../Graficos/BultosGraph.php">Cargas </a>  </li>
+                <li><a href="../Graficos/ConsignaGraph.php">Consignatario</a> </li>
+                <li><a href="../Graficos/FaenaGraph.php">Faena</a> </li>
+                <li><a href="../Graficos/OperacionGraph.php">Operacion</a> </li>
+                <li><a href="../Graficos/ProcedenciaGraph.php">Procedencia</a> </li>
+            </ul>
+        </li> 
+        
+        <li> <a href="../Buscadores/salir.php">Cerrar Sesion </a> </li>
+    </ul>
+
+	</div>
+
+ <?php } ?>
+ <br /> </br> </br></br> 
+    	<p style="font-size:40px">Tiempo de los camiones en el terminal</p>
+        <br /> <br />
+        <div style="font-size:30px">
+  <td><a>Indicar patente:  </a><input type="text" size="10" name="patente" id="patente" style="height:40px; width:160px"></td> 
+  <a> o  </a>      
+ <td><a>Indicar Fecha de retiro:  </a><input type="date" size="10" name="fecha" id="fecha" style="height:40px; width:190px; font-size:20px"></td> <br />
+ <br />
+ <input type="submit" name="btnFech" id="btnFech" value="Buscar" style="height:40px; width:160px"/>
+ </div>
+ 
+ <br />
+ <br />
+
+<table class="tabla" id="datagrid">
+<tr style="background:#FFF;">
+  	<th width="65">Patente</th>
+    <th width="65">Hora Ingreso</th>
+    <th width="63">Hora Retiro</th>
+    <th width="65">Fecha Ingreso</th>
+    <th width="63">Fecha Retiro</th>
+    <th width="63">Tiempo de permanencia</th>
+    </tr></table>
+   
+<script src="../js/jquery.min.js"></script>
+<script src="../js/Tiempo.js"></script>
+
+</center>
+</body>
+</html>

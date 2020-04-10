@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/puertas/!svn/ver/6/Highcharts-4.1.5/exporting-server/java/highcharts-export/highcharts-export-convert/target/classes
+END
+spring-convert.xml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/puertas/!svn/ver/6/Highcharts-4.1.5/exporting-server/java/highcharts-export/highcharts-export-convert/target/classes/spring-convert.xml
+END
+app-convert.properties
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/repos/puertas/!svn/ver/6/Highcharts-4.1.5/exporting-server/java/highcharts-export/highcharts-export-convert/target/classes/app-convert.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/puertas/!svn/ver/6/Highcharts-4.1.5/exporting-server/java/highcharts-export/highcharts-export-convert/target/classes/log4j.properties
+END

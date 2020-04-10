@@ -1,0 +1,261 @@
+/* CSS Document */
+
+.Registro{
+border:1;
+width: 35%; 
+margin-left: 10%;	
+}
+
+#manual {
+width:190px; 
+height:35px; 
+border:1px solid #000; 
+border-radius: 5px; 
+font-size:20px	
+}
+
+
+.Registro a {
+	font-size:25px;	
+	color: #000;
+	text-decoration:none;
+	
+}
+
+.Registro input {
+	width:350px;
+	height: 30px;
+	font-size:17px;	
+	float:right;
+}
+
+.Registro select {
+	width:350px;
+	height: 30px;
+	float:right;
+	font-size:16px;		
+}
+
+
+.Registro2{
+	width: 35%; 
+	margin-top: -450px;	
+	margin-right: 10%;
+	float:right;
+}
+
+
+.Registro2 a {
+	font-size:25px;	
+	color: #000;
+	text-decoration:none;
+	
+}
+
+.Registro2 input {
+	width:350px;
+	height: 30px;	
+	float:right;
+}
+
+.Registro2 select {
+	width:350px;
+	height: 30px;
+	float:right;	
+}
+
+
+.Registro3 input[type=radio]{
+	 
+    border: 0px;
+    width: 25%;
+    height: 1em;
+
+}
+
+.Registro3{
+	
+	width: 800px; 
+	margin-top: 30px;
+	margin-left: 10%;		
+	float:;	
+}
+
+.Registro3 input {
+	
+	width: 10px;
+	padding:0;
+	margin-left:40px;
+	float:left;
+}
+
+
+
+	
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #4CAF50;}
+	
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+  
+}
+.tabla { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+.tabla th { 
+  font-size:16px;
+  text-align:center;
+}
+
+.tabla td { 
+  font-size:16px;  
+  text-align:center;
+}
+
+
+
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+
+
+
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 25px;
+  padding: 6px 10px;
+  border: 1px solid #ccc; 
+  text-align: center; 
+  font-size: 18x;
+  width:100px;
+}
+td { 
+  padding: 6px 10px;
+  border: 1px solid #ccc; 
+  text-align: center; 
+  font-size: 18px;
+  width:200;
+  
+}
+
+
+@media  
+	screen and (max-width: 1366px) {
+
+.Registro{
+border:1;
+width: 40%; 
+margin-left: 8%;	
+}
+
+
+#manual {
+width:120px; 
+height:30px; 
+border:1px solid #000; 
+border-radius: 5px; 
+font-size:12px	
+}
+
+
+.Registro a {
+	font-size:17px;	
+	color: #000;
+	text-decoration:none;
+	
+}
+
+.Registro input {
+	width:350px;
+	height: 25px;
+	font-size:13px;	
+	float:right;
+}
+
+.Registro select {
+	width:350px;
+	height: 25px;
+	float:right;
+	font-size:13px;		
+}
+
+
+.Registro2{
+	width: 40%; 
+	margin-top: -380px;	
+	margin-right: 6%;
+	float:right;
+}
+
+
+.Registro2 a {
+	font-size:17px;	
+	color: #000;
+	text-decoration:none;
+	
+}
+
+.Registro2 input {
+	width:300px;
+	height: 25px;	
+	float:right;
+}
+
+.Registro2 select {
+	width:300px;
+	height: 25px;
+	float:right;	
+}
+
+.Registro3 input[type=radio]{
+	 
+    border: 1px solid #000;
+    width: 15%;
+    height: 1em;
+
+}
+
+.Registro3{
+	
+	width: 800px; 
+	margin-top: 30px;
+	margin-left: 8%;	
+	
+}
+
+.Registro3 input {
+	
+	width: 10px;
+	padding:0;
+	margin-left:40px;
+	float:left;
+}
+
+
+}
+	

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Documento sin título</title>
 
-<frameset rows="45%,*" cols="*" framespacing="0" frameborder="NO" border="0">
+<frameset rows="45%,*" cols="*" framespacing="0" frameborder="YES" border="0">
 <frame src="salida.php" name="pTopS" frameborder="no" scrolling="no"
  noresize="noresize" />
  <frame src="listadosalida.php" name="pListadoS" />

@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.php" server="C:/xampp/htdocs/proyectoV2/" local="132203325950792589" remote="132203325950000000" Dst="2" />
-<file name="ingreso.php" server="C:/xampp/htdocs/proyectoV2/" local="132206510243835023" remote="132206510240000000" Dst="2" />
-<file name="inicio.php" server="C:/xampp/htdocs/proyectoV2/" local="132202968744529277" remote="132202968740000000" Dst="2" />
-<file name="salida.php" server="C:/xampp/htdocs/proyectoV2/" local="132201596042348624" remote="132201596040000000" Dst="2" />
-<file name="informes.php" server="C:/xampp/htdocs/proyectoV2/" local="132201596430122913" remote="132201596430000000" Dst="2" />
-<file name="inicioError.php" server="C:/xampp/htdocs/proyectoV2/" local="132201556272817933" remote="132201556270000000" Dst="2" />
-<file name="listado.php" server="C:/xampp/htdocs/proyectoV2/" local="132206509431338255" remote="132206509430000000" Dst="2" />
+<file name="index.php" server="C:/xampp/htdocs/proyectoV2/" local="132247094541954251" remote="132247094540000000" Dst="0" />
+<file name="ingreso.php" server="C:/xampp/htdocs/proyectoV2/" local="132258224072372546" remote="132258224070000000" Dst="0" />
+<file name="inicio.php" server="C:/xampp/htdocs/proyectoV2/" local="132259082457004487" remote="132259082450000000" Dst="0" />
+<file name="salida.php" server="C:/xampp/htdocs/proyectoV2/" local="132259048532956495" remote="132259048530000000" Dst="0" />
+<file name="informes.php" server="C:/xampp/htdocs/proyectoV2/" local="132259071023238231" remote="132259071020000000" Dst="0" />
+<file name="inicioError.php" server="C:/xampp/htdocs/proyectoV2/" local="132201556272817933" remote="132201556270000000" Dst="0" />
+<file name="listado.php" server="C:/xampp/htdocs/proyectoV2/" local="132254097436465209" remote="132254097430000000" Dst="0" />
+<file name="registro_ingreso.php" server="C:/xampp/htdocs/proyectoV2/" local="132221957868711699" remote="132221957860000000" Dst="0" />
+<file name="listadosalida.php" server="C:/xampp/htdocs/proyectoV2/" local="132254075703493021" remote="132254075700000000" Dst="0" />
+<file name="Login.php" server="C:/xampp/htdocs/proyectoV2/" local="132258293283378603" remote="132258293280000000" Dst="0" />
+<file name="Registro.php" server="C:/xampp/htdocs/proyectoV2/" local="132258210470009971" remote="132258210470000000" Dst="0" />
+<file name="inicio_operador.php" server="C:/xampp/htdocs/proyectoV2/" local="132259072278610107" remote="132259072270000000" Dst="0" />
+<file name="informes_telefono.php" server="C:/xampp/htdocs/proyectoV2/" local="132259071181267570" remote="132259071180000000" Dst="0" />
+<file name="registro_salida.php" server="C:/xampp/htdocs/proyectoV2/" local="132253924036334946" remote="132253924030000000" Dst="0" />
+<file name="Telefono_Admin.php" server="C:/xampp/htdocs/proyectoV2/" local="132252249314225031" remote="132252249310000000" Dst="0" />
+<file name="Testeo.php" server="C:/xampp/htdocs/proyectoV2/" local="132259077510518861" remote="132259077510000000" Dst="0" />
 </dwsync>
